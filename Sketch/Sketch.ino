@@ -43,29 +43,39 @@ void loop(){
 			float randomTime = random(100, 2700);
 			delay(randomTime);
 			Serial.println(2.7 + randomTime / 1000);
-
+                        SerialOut(4);
 			digitalWrite(3, HIGH);
-			tone(8, pulseFreq, 600);
+			tone(8, pulseFreq, 60);
 			testStop();
 
-			delay(1200);
+			delay(120);
 			digitalWrite(4, HIGH);
-			tone(8, pulseFreq, 600);
+			tone(8, pulseFreq, 60);
 			testStop();
 
-			delay(1200);
+			delay(120);
 			digitalWrite(5, HIGH);
-			tone(8, pulseFreq, 600);
+			tone(8, pulseFreq, 60);
 			testStop();
 
-			delay(1200);
+			delay(120);
 			allLights();
 			tone(8, pulseFreq, 2250);
 			delay(2250);
 			SerialOut(2);
 			gate.write(120);
-			delay(5000);
-		}
 
+			//hier code voor startsensor
+
+		  	StartTime();
+
+            bool finished = false;
+			while (finished == false)
+            {
+				delay(50);
+                if (digitalRead(9) == HIGH) finished = true;
+            }
+			StopTime();
+		}
 	}
 }

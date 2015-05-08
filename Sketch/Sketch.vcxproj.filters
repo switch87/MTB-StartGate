@@ -14,10 +14,22 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="_core">
-      <UniqueIdentifier>{5965ee08-6a87-4ab1-b13f-7d74cf786b21}</UniqueIdentifier>
+      <UniqueIdentifier>{f02cdb63-8760-46a7-8a2c-1ee58f6845e1}</UniqueIdentifier>
     </Filter>
     <Filter Include="_libraries">
-      <UniqueIdentifier>{03e27704-9122-46d3-9b38-4695c73c6d14}</UniqueIdentifier>
+      <UniqueIdentifier>{fc184ebb-b071-400b-9164-9ff7ac9fc283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libraries\Servo">
+      <UniqueIdentifier>{3084a05d-31b3-4122-9105-4a13838ee8d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libraries\Servo\src">
+      <UniqueIdentifier>{f64ee9b2-39d2-49dc-b914-393c881905d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libraries\Servo\src\avr">
+      <UniqueIdentifier>{dd2a45bb-c5a9-450e-b5f0-9656c772c0ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libraries\Servo\src\sam">
+      <UniqueIdentifier>{7516cfe5-6b5b-4974-bf97-a9398157944c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -25,6 +37,7 @@
     <None Include="Light.ino" />
     <None Include="Stop.ino" />
     <None Include="SerialOut.ino" />
+    <None Include="Stopwatch.ino" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Visual Micro\.Sketch.vsarduino.h">
@@ -86,6 +99,15 @@
     </ClInclude>
     <ClInclude Include="c:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard\pins_arduino.h">
       <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="c:\Program Files (x86)\Arduino\libraries\Servo\src\Servo.h">
+      <Filter>_libraries\Servo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="c:\Program Files (x86)\Arduino\libraries\Servo\src\avr\ServoTimers.h">
+      <Filter>_libraries\Servo\src\avr</Filter>
+    </ClInclude>
+    <ClInclude Include="c:\Program Files (x86)\Arduino\libraries\Servo\src\sam\ServoTimers.h">
+      <Filter>_libraries\Servo\src\sam</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +182,12 @@
     </ClCompile>
     <ClCompile Include="c:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\WString.cpp">
       <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="c:\Program Files (x86)\Arduino\libraries\Servo\src\avr\Servo.cpp">
+      <Filter>_libraries\Servo\src\avr</Filter>
+    </ClCompile>
+    <ClCompile Include="c:\Program Files (x86)\Arduino\libraries\Servo\src\sam\Servo.cpp">
+      <Filter>_libraries\Servo\src\sam</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -90,4 +90,5 @@ extern "C" void __cxa_pure_virtual() {;}
 #include <Light.ino>
 #include <SerialOut.ino>
 #include <Stop.ino>
+#include <Stopwatch.ino>
 #endif

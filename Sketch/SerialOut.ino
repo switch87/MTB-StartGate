@@ -2,7 +2,7 @@ void SerialOut(int msg){
 	switch (msg)
 	{
 	case 0:
-		Serial.println("OK RIDERS RANDOM START");
+  		Serial.println("OK RIDERS RANDOM START");
 		break;
 	case 1:
 		Serial.println("RIDERS READY - WATCH THE GATE");
@@ -12,6 +12,9 @@ void SerialOut(int msg){
 		break;
 	case 3:
 		Serial.println("STOP");
+		break;
+case 4:
+Serial.println("LIGHTS");
 		break;
 	default:
 		break;
