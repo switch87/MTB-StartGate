@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
     <RootNamespace>Sketch</RootNamespace>
-    <ProjectName>Sketch</ProjectName>
+    <ProjectName>MTBGateArduino</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -47,7 +47,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>c:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;c:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard;I:\workspace\MTB-StartGate\Sketch;c:\Program Files (x86)\Arduino\libraries\Servo\src;c:\Program Files (x86)\Arduino\libraries\Servo\src\utility;c:\Program Files (x86)\Arduino\libraries;c:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;I:\workspace\libraries;c:\program files (x86)\arduino\hardware\tools\avr\avr\include\;c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\;c:\program files (x86)\arduino\hardware\tools\avr\avr\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>c:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;c:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard;I:\workspace\MTB-StartGate\Sketch;c:\Program Files (x86)\Arduino\libraries\Servo\src;c:\Program Files (x86)\Arduino\libraries\Servo\src\utility;c:\Program Files (x86)\Arduino\libraries;c:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;I:\workspace\libraries;c:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;c:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;c:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>I:\workspace\MTB-StartGate\Sketch\Visual Micro\.Sketch.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;ARDUINO=164;ARDUINO_MAIN;__AVR__;__avr__;F_CPU=16000000L;__cplusplus;ARDUINO_ARCH_AVR;ARDUINO_AVR_UNO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -71,13 +71,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="Light.ino" />
-    <None Include="SerialOut.ino" />
+    <None Include="Light.ino">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="SerialOut.ino">
+      <FileType>CppCode</FileType>
+    </None>
     <None Include="Sketch.ino">
       <FileType>CppCode</FileType>
     </None>
-    <None Include="Stop.ino" />
-    <None Include="Stopwatch.ino" />
+    <None Include="Stop.ino">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="Stopwatch.ino">
+      <FileType>CppCode</FileType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="c:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\Arduino.h" />
