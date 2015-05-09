@@ -53,9 +53,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Race\Compititor\Competitor.cs" />
-    <Compile Include="Race\Compititor\Score.cs" />
-    <Compile Include="Race\Compititor\EnumIRM.cs" />
+    <Compile Include="Compititors\Competitor.cs" />
+    <Compile Include="Compititors\Score.cs" />
+    <Compile Include="Compititors\EnumIRM.cs" />
     <Compile Include="Race\EnumRaceName.cs" />
     <Compile Include="Race\Stage.cs" />
     <Compile Include="Race\IRace.cs" />

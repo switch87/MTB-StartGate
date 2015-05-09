@@ -52,11 +52,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bell.wav" />
-    <Content Include="nbl8.wav" />
-    <Content Include="or.wav" />
-    <Content Include="rr.wav" />
-    <Content Include="Saw.mp3" />
+    <Content Include="Sounds\or.wav" />
+    <Content Include="Sounds\rr.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -49,17 +49,20 @@ void loop(){
 			testStop();
 
 			delay(120);
+			SerialOut(4);
 			digitalWrite(4, HIGH);
 			tone(8, pulseFreq, 60);
 			testStop();
 
 			delay(120);
+			SerialOut(4);
 			digitalWrite(5, HIGH);
 			tone(8, pulseFreq, 60);
 			testStop();
 
 			delay(120);
 			allLights();
+			SerialOut(5);
 			tone(8, pulseFreq, 2250);
 			delay(2250);
 			SerialOut(2);

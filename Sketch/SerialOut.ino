@@ -16,6 +16,9 @@ void SerialOut(int msg){
 	case 4:
 		Serial.println("LIGHTS");
 		break;
+	case 5:
+		Serial.println("ALLLIGHTS");
+		break;
 	default:
 		break;
 	}

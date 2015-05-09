@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using MTBCompetition.Race.Compititor;
+using MTBCompetition.Compititors;
 
 namespace MTBCompetition.Race
 {
@@ -13,30 +13,31 @@ namespace MTBCompetition.Race
 
         public int? RaceStage { get; set; }
         public IRace[] Races { get; private set; }
-        public bool RaceStarted { get; private set; }
         public List<Competitor> CompititorsList { get; private set; }
+        public int NrOfCompetitors { get; private set; }
 
         public void AddCompititor(Competitor competitor)
         {
-            if (!RaceStarted) CompititorsList.Add(competitor);
+            if (RaceStage==null) CompititorsList.Add(competitor);
         }
 
         public void Start()
         {
             if (RaceStarted) return;
-            if (CompititorsList.Count < 9)
+            NrOfCompetitors = CompititorsList.Count;
+            if (NrOfCompetitors < 9)
             {
                 Races = new IRace[2];
-                Races[1] = new Stage(RaceName.Final);
+                Races[1] = new Stage(this, RaceName.Final, 2);
             }
             else
             {
                 Races = new IRace[3];
-                Races[1] = new Qualifiers();
-                Races[2] = new Stage(RaceName.Final);
+                Races[1] = new Qualifiers(NrOfCompetitors);
+                Races[2] = new Stage(this, RaceName.Final, 2);
             }
 
-            Races[0] = new Motos();
+            Races[0] = new Motos(NrOfCompetitors);
             RaceStage = 0;
         }
 

@@ -7,7 +7,9 @@ namespace gate
 {
     internal class Program
     {
-        //[STAThread]
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool Beep(uint dwFreq, uint dwDuration);
+
         private static void Main(string[] args)
         {
             var comPort = new SerialPort("COM3", 9600);
@@ -26,16 +28,18 @@ namespace gate
 
             while (true)
             {
-                comPort.ReadTimeout = 2000;
+                comPort.ReadTimeout = 10;
                 try
                 {
                     var msg = comPort.ReadLine();
                     if (msg.StartsWith("OK RIDERS RANDOM START"))
-                        engine.Play2D("../../or.wav");
+                        engine.Play2D("Sounds/or.wav");
 
                     else if (msg.StartsWith("RIDERS READY - WATCH THE GATE"))
-                        engine.Play2D("../../rr.wav");
-                    else if (msg.StartsWith("LIGHTS")) engine.StopAllSounds();
+                        engine.Play2D("Sounds/rr.wav");
+                    else if (msg.StartsWith("LIGHTS"))
+                        engine.StopAllSounds();
+
                     Console.Out.WriteLine(msg);
                 }
                 catch
