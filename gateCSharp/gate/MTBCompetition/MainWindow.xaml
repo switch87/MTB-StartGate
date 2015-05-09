@@ -1,0 +1,42 @@
+﻿<Window x:Class="MTBCompetition.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <!--<Window.CommandBindings>
+        <CommandBinding
+            Command="{x:Static custom:BarWindow.mijnRouteCtrlB}"
+            Executed="ctrlBExecuted" />
+        <CommandBinding
+            Command="{x:Static custom:BarWindow.mijnRouteCtrlI}"
+            Executed="ctrlIExecuted" />
+        <CommandBinding Command="Save" Executed="SaveExecuted"></CommandBinding>
+        <CommandBinding Command="Open" Executed="OpenExecution"></CommandBinding>
+        <CommandBinding Command="Print" Executed="PrintExecuted"></CommandBinding>
+        <CommandBinding Command="PrintPreview" Executed="PreviewExecuted"></CommandBinding>
+        <CommandBinding Command="Close" Executed="CloseExecuted"></CommandBinding>
+    </Window.CommandBindings>-->
+    <!--<Window.InputBindings>
+        <KeyBinding Key="B" Modifiers="Control"
+                    Command="{x:Static custom:BarWindow.mijnRouteCtrlB}"/>
+        <KeyBinding Key="I" Modifiers="Control"
+                    Command="{x:Static custom:BarWindow.mijnRouteCtrlI}"/>
+    </Window.InputBindings>-->
+    <DockPanel>
+        <Menu Height="24" Name="MenuBalk" DockPanel.Dock="Top">
+            <MenuItem Header="_Competition">
+                <MenuItem Header="Open" Command="Open" />
+                <MenuItem Header="Save" Command="Save" />
+                <MenuItem Header="printPreview" Command="PrintPreview" />
+                <MenuItem Header="Print..." Command="Print" />
+                <Separator />
+                <MenuItem Header="Afsluiten" Command="Close" />
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Edit Compititors" />
+            </MenuItem>
+            <MenuItem Header="Start" />
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom" Height="24" />
+
+    </DockPanel>
+</Window>
